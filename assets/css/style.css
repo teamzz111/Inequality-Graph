@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dcg-pillbox-container .dcg-settings-pillbox,
+.dcg-pillbox-container .dcg-settings-pillbox {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
