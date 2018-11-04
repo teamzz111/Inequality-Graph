@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  <div id="calculator" style="width: 800px; height: 600px;"></div>
+  <div id="calculator" class="content"></div>
   <script>
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
     calculator.setExpression({
       id: 'graph1',
-      latex: '4x-6y>0'
+      latex: ''
     });
   </script>
   <script>

@@ -1,4 +1,4 @@
-;
+
 (function() {
     if (!window.Desmos) window.Desmos = {};
     window.Desmos.enabledFeatures = {
