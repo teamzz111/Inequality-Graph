@@ -1,4 +1,4 @@
-#Métodos Numéricos - graficador de inecuaciones
+# Métodos Numéricos - graficador de inecuaciones
 - [ ] Diseño de la página.
 - [ ] Creación de inputs y validación de los mismos.
 - [ ] Página de resultados paso por paso.
