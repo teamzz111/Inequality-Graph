@@ -82,10 +82,71 @@
             <br><br>
             <div class="d-flex but-but">
                 <button type="button" class="btn btn-success m-3" onclick="punto()">Paso a paso</button>
-                <button type="button" class="btn btn-danger m-3" onclick="graph()">Grafica</button>
             </div>
         </div>
     </div>
+
+    
+    <div id="LosPasotes" class="pasosApasos">
+            <section class="Inec1"> <!--Inecuacion 1--> 
+                <h2>Primera Inecuación:</h2>
+                <br><br>
+    
+                <!--    Despejar Y    -->
+                <h3>Despeje Y:</h3>
+                <div class="Zona">
+                    <div class="VAR">Y=  </div>
+                    <div id="GetX1" class="XY1"></div>
+                    <div id="GetYC1" class="C1"></div>
+                </div>
+    
+                <!--    Despejar X    -->
+                <h3>Despeje X:</h3>
+                <div class="Zona">
+                    <div class="VAR">X=  </div>
+                    <div id="GetY1" class="XY1"></div>
+                    <div id="GetXC1" class="C1"></div>
+                </div>
+    
+            </section>
+    
+    
+            <section class="Inec2"> <!--Inecuacion 2--> 
+                <h2>Segunda Inecuación:</h2>
+                <br><br>
+    
+                <!--    Despejar Y    -->
+                <h3>Despeje Y:</h3>
+                <div class="Zona">
+                    <div class="VAR">Y=  </div>
+                    <div id="GetX2" class="XY1"></div>
+                    <div id="GetYC2" class="C1"></div>
+                </div>
+    
+                <!--    Despejar X    -->
+                <h3>Despeje X:</h3>
+                <div class="Zona">
+                    <div class="VAR">X=  </div>
+                    <div id="GetY2" class="XY1"></div>
+                    <div id="GetXC2" class="C1"></div>
+                </div>
+    
+            </section>
+            
+        </div>
+        <div id="LosPuntotes" class="Puntos">
+            <!--    Punto de Corte    -->
+            <h3>Puntos de corte (X,Y):</h3>
+            <div class="Zona">
+                <div id="PuntotesMachos"></div>
+            </div>
+
+            <div class="d-flex but-but">
+                <button type="button" class="btn btn-danger m-3" onclick="graph()">Grafica</button>
+            </div>
+        </div>
+        
+
     <div id="calculator" class="container-cal">
     </div>
     <script src="script.js"></script>    

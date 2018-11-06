@@ -88,9 +88,27 @@ function punto() {
     if (c2 % y2 == 0) {
         ec2 = c2 / y2;
     }
+    var Xec1= ec1+"";
+    var Xec2= ec2+"";
 
     var ye1 = ex1 + "+" + ec1; //y1 despejado
     var ye2 = ex2 + "+" + ec2; //y2 despejado
+
+    document.getElementById("GetX1").innerHTML = " "+ex1+" ";
+    if(Xec1.startsWith("-")){
+        document.getElementById("GetYC1").innerHTML = " "+ec1;
+    }
+    else{
+        document.getElementById("GetYC1").innerHTML = " + "+ec1;
+    }
+
+    document.getElementById("GetX2").innerHTML = " "+ex2+" ";
+    if(Xec2.startsWith("-")){
+        document.getElementById("GetYC2").innerHTML = " "+ec2;
+    }
+    else{
+        document.getElementById("GetYC2").innerHTML = " + "+ec2;
+    }
 
     var ey1 = -y1 + "y/" + x1;
     var ec1 = c1 + "/" + x1;
@@ -111,12 +129,34 @@ function punto() {
     var xx1 = ey1 + "+" + ec1; //x1 despejado
     var xx2 = ey2 + "+" + ec2; //x2 despejado
 
+    document.getElementById("GetY1").innerHTML = " "+ey1+" ";
+    if(Xec1.startsWith("-")){
+        document.getElementById("GetXC1").innerHTML = " "+ec1;
+    }
+    else{
+        document.getElementById("GetXC1").innerHTML = " + "+ec1;
+    }
+
+    document.getElementById("GetY2").innerHTML = ey2+" ";
+    if(Xec2.startsWith("-")){
+        document.getElementById("GetXC2").innerHTML = " "+ec2;
+    }
+    else{
+        document.getElementById("GetXC2").innerHTML = " + "+ec2;
+    }
+
+
     r = -(x1 / y1) + (x2 / y2);
     r1 = (c1 / y1) - (c2 / y2);
     equis = r1 / r; //x del punto de corte 
-    equis = equis.toFixed(3);
+    equis = equis.toFixed(2);
     ye = ((x1 * equis) / y1) + (c1 / y1); // y del punto de parte
-    ye = ye.toFixed(3); //limita los decimales      
+    ye = ye.toFixed(2); //limita los decimales      
+
+    document.getElementById("PuntotesMachos").innerHTML = "( "+(-equis)+" , "+ye+" )";
+
+    document.getElementById('LosPasotes').style.display = 'block';
+    document.getElementById('LosPuntotes').style.display = 'block';
 
 }
 function graph(){
