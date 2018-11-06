@@ -2,7 +2,13 @@
 $(document).ready(function() {
 	$('#MostrarPasos').click(function() {
         $('html, body').animate({
-          scrollTop: $("#LosPAsotes").offset().top
+          scrollTop: $("#LosPasotes").offset().top
+        }, 2000)
+        return false;
+    });
+    $('#MostrarGrafica').click(function() {
+        $('html, body').animate({
+          scrollTop: $("#calculator").offset().top
         }, 2000)
         return false;
     });
