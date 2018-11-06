@@ -23,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link"  href="/">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" target="_blank" href="https://github.com/teamzz111/Ant-colony">Github <span class="sr-only">(current)</span></a>
@@ -40,10 +40,21 @@
   </div>
   <script>
     var elt = document.getElementById('calculator');
-    var calculator = Desmos.GraphingCalculator(elt);
+    var calculator = Desmos.GraphingCalculator(elt, {
+      keypad: false,
+      expressions: false,
+      settingsMenu: false,
+      zoomButtons: false
+    });
+    //N EXPRESIONES REQUIEREN N IDS
     calculator.setExpression({
       id: 'graph1',
-      latex: ''
+      latex: '4x+2y<0'
+    });
+    calculator.setExpression({
+      id: 'graph2',
+      latex: 'x+y>0'
+      
     });
   </script>
   <!--Script for stop the water mark-->
