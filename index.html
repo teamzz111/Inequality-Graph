@@ -10,10 +10,8 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -51,15 +49,15 @@
             <div class="d-flex">
                 <input type="text" class="x1 form-control m-2" name="x1" id="formGroupExampleInput" placeholder="Ejemplo 2X">
                 <div class="plusplus">
-                   <h5>+</h5>
+                    <h5>+</h5>
                 </div>
                 <input type="text" class="y1 form-control m-2" name="y1" id="formGroupExampleInput" placeholder="Ejemplo Y">
-                <select class="custom-select m-2" id="inputGroupSelect01">
+                <select class="custom-select m-2" id="s1" >
                     <option selected>Elige...</option>
                     <option value="1"> >= </option>
-                    <option value="2"> <= </option>
-                    <option value="3"> < </option>
-                    <option value="4"> > </option>
+                    <option value="2"> <= </option> 
+                    <option value="3"> > </option>
+                    <option value="4"> < </option>
                 </select>
                 <input type="text" class="c1 form-control m-2" name="c1" id="formGroupExampleInput" placeholder="Ejemplo 0">
             </div>
@@ -72,83 +70,27 @@
                     <h5>+</h5>
                 </div>
                 <input type="text" class="y2 form-control m-2" name="y2" id="formGroupExampleInput" placeholder="Ejemplo Y">
-                <select class="custom-select m-2" id="inputGroupSelect01">
+                <select class="custom-select m-2" id="s2">
                     <option selected>Elige...</option>
                     <option value="1"> >= </option>
-                    <option value="2"> <= </option>
-                    <option value="3"> < </option>
-                    <option value="4"> > </option>
+                    <option value="2"> <= </option> 
+                    <option value="3"> > </option>
+                    <option value="4"> < </option>
                 </select>
                 <input type="text" class="c2 form-control m-2" name="c2" id="formGroupExampleInput" placeholder="Ejemplo 0">
             </div>
             <br><br>
             <div class="d-flex but-but">
                 <button type="button" class="btn btn-success m-3" onclick="punto()">Paso a paso</button>
-                <button type="button" class="btn btn-danger m-3"><a href="calculator.html">Grafica</a></button>
+                <button type="button" class="btn btn-danger m-3" onclick="graph()">Grafica</button>
             </div>
         </div>
 
     </div>
-
-    <script type="text/javascript">
-        function punto() {
-            var x1 = $(".x1").val();
-            var y1 = $(".y1").val();
-            var c1 = $(".c1").val();
-            var x2 = $(".x2").val();
-            var y2 = $(".y2").val();
-            var c2 = $(".c2").val();
-
-            var ex1 = -x1 + "x/" + y1;
-            var ec1 = c1 + "/" + y1;
-            var ex2 = -x2 + "x/" + y2;
-            var ec2 = c2 + "/" + y2;
-            if (x1 % y1 == 0) {
-                ex1 = (-x1 / y1) + "x";
-            }
-            if (x2 % y2 == 0) {
-                ex2 = (-x2 / y2) + "x";
-            }
-            if (c1 % y1 == 0) {
-                ec1 = c1 / y1;
-            }
-            if (c2 % y2 == 0) {
-                ec2 = c2 / y2;
-            }
-
-            var ye1 = ex1+"+"+ ec1; //y1 despejado
-            var ye2 = ex2+"+"+ ec2; //y2 despejado
-
-            var ey1 = -y1 + "y/" + x1;
-            var ec1 = c1 + "/" + x1;
-            var ey2 = -y2 + "y/" + x2;
-            var ec2 = c2 + "/" + x2;
-            if (y1 % x1 == 0) {
-                ex1 = (-y1 / x1) + "y";
-            }
-            if (y2 % x2 == 0) {
-                ey2 = (-y2 / x2) + "y";
-            }
-            if (c1 % y1 == 0) {
-                ec1 = c1 / x1;
-            }
-            if (c2 % y2 == 0) {
-                ec2 = c2 / x2;
-            }
-            var xx1 = ey1+"+"+ ec1; //x1 despejado
-            var xx2 = ey2+"+"+ ec2; //x2 despejado
-
-            r = -(x1 / y1) + (x2 / y2);
-            r1 = (c1 / y1) - (c2 / y2); 
-            equis = r1 / r; //x del punto de corte 
-            equis=equis.toFixed(3);
-            ye = ((x1 * equis) / y1) + (c1 / y1);// y del punto de parte
-            ye=ye.toFixed(3);//limita los decimales
-          
-            alert(" punto de corte= (" + equis + "," + ye + ")");
-
-        }
-    </script>
+    <div id="calculator" class="container-cal">
+    </div>
+    <script src="script.js"></script>    
+    <script src="assets/js/calculator.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
