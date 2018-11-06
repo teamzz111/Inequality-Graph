@@ -1,3 +1,14 @@
+
+$(document).ready(function() {
+	$('#MostrarPasos').click(function() {
+        $('html, body').animate({
+          scrollTop: $("#LosPAsotes").offset().top
+        }, 2000)
+        return false;
+    });
+})
+
+
 var ecu1 , ecu2;
 function punto() {    
     var x1 = $(".x1").val();
@@ -179,3 +190,4 @@ var elt = document.getElementById('calculator');
       latex: ecu2
     });
 }
+

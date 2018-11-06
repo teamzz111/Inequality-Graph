@@ -30,16 +30,16 @@ body .plusplus{
 
 body .pasosApasos{
   width: 100%;
-  padding: 7%;
   display: none;
   height: auto;
+  padding-top: 5%;
 }
 
 body .Puntos{
   width: 100%;
   padding: 7%;
   display: none;
-  margin-top: 15%;
+  margin-top: 35%;
   text-align: center;
 }
 
