@@ -13,4 +13,8 @@ body .container-cal {
   width: 100%;
   height: 100vh;
 }
+
+body .container .form-group .but-but .btn a {
+  color: white !important;
+}
 /*# sourceMappingURL=style.css.map */
