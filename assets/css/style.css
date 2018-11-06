@@ -26,4 +26,46 @@ body .plusplus{
   padding-top: 12px;
   text-align: center;
 }
+
+body .pasosApasos{
+  width: 100%;
+  padding: 7%;
+}
+
+body .pasosApasos .Inec1{
+  position: absolute;
+  float: left;
+  width: 43%;
+  margin-left: 0;
+}
+
+body .pasosApasos .Inec2{
+  position: absolute;
+  float: left;
+  width: 43%;
+  margin-left: 50%;
+}
+ .VAR{
+  /* position: absolute;
+   margin-left: 10px; */
+  display: flex;
+  float: left;
+ }
+.XY1{
+  /*position: absolute;
+  margin-left: 35px; */
+  display: flex;
+  float: left;
+}
+.C1{
+  /*position: absolute;
+  margin-left: 80px; */
+  display: flex;
+  float: left;
+}
+
+body .pasosApasos .Zona{
+  width: 100%;
+  height: 100px;
+}
 /*# sourceMappingURL=style.css.map */

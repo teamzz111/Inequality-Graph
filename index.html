@@ -90,6 +90,60 @@
 
     </div>
 
+    <div class="pasosApasos">
+        <section class="Inec1"> <!--Inecuacion 1--> 
+            <h2>Primera Inecuación:</h2>
+            <br><br>
+
+            <!--    Despejar Y    -->
+            <h3>Despeje Y:</h3>
+            <div class="Zona">
+                <div class="VAR">Y= </div>
+                <div id="GetX1" class="XY1"></div>
+                <div id="GetYC1" class="C1"></div>
+            </div>
+
+            <!--    Despejar X    -->
+            <h3>Despeje X:</h3>
+            <div class="Zona">
+                <div class="VAR">X= </div>
+                <div id="GetY1" class="XY1"></div>
+                <div id="GetXC1" class="C1"></div>
+            </div>
+
+        </section>
+
+
+        <section class="Inec2"> <!--Inecuacion 2--> 
+            <h2>Segunda Inecuación:</h2>
+            <br><br>
+
+            <!--    Despejar Y    -->
+            <h3>Despeje Y:</h3>
+            <div class="Zona">
+                <div class="VAR">Y= </div>
+                <div id="GetX2" class="XY1"></div>
+                <div id="GetYC2" class="C1"></div>
+            </div>
+
+            <!--    Despejar X    -->
+            <h3>Despeje X:</h3>
+            <div class="Zona">
+                <div class="VAR">X= </div>
+                <div id="GetY2" class="XY1"></div>
+                <div id="GetXC2" class="C1"></div>
+            </div>
+
+        </section>
+        
+        <!--    Punto de Corte    -->
+        <h3>Puntos de corte (X,Y):</h3>
+        <div class="Zona">
+
+        </div>
+        
+    </div>
+
     <script type="text/javascript">
         function punto() {
             var x1 = $(".x1").val();
@@ -119,6 +173,22 @@
             var ye1 = ex1+"+"+ ec1; //y1 despejado
             var ye2 = ex2+"+"+ ec2; //y2 despejado
 
+            document.getElementById("GetX1").innerHTML = ex1+" ";
+            if(ec1.startsWith("-")){
+                document.getElementById("GetYC1").innerHTML = " "+ec1;
+            }
+            else{
+                document.getElementById("GetYC1").innerHTML = " + "+ec1;
+            }
+
+            document.getElementById("GetX2").innerHTML = ex2+" ";
+            if(ec1.startsWith("-")){
+                document.getElementById("GetYC2").innerHTML = " "+ec2;
+            }
+            else{
+                document.getElementById("GetYC2").innerHTML = " + "+ec2;
+            }
+
             var ey1 = -y1 + "y/" + x1;
             var ec1 = c1 + "/" + x1;
             var ey2 = -y2 + "y/" + x2;
@@ -138,6 +208,22 @@
             var xx1 = ey1+"+"+ ec1; //x1 despejado
             var xx2 = ey2+"+"+ ec2; //x2 despejado
 
+            document.getElementById("GetY1").innerHTML = ey1+" ";
+            if(ec1.startsWith("-")){
+                document.getElementById("GetXC1").innerHTML = " "+ec1;
+            }
+            else{
+                document.getElementById("GetXC1").innerHTML = " + "+ec1;
+            }
+
+            document.getElementById("GetY2").innerHTML = ey2+" ";
+            if(ec1.startsWith("-")){
+                document.getElementById("GetXC2").innerHTML = " "+ec2;
+            }
+            else{
+                document.getElementById("GetXC2").innerHTML = " + "+ec2;
+            }
+
             r = -(x1 / y1) + (x2 / y2);
             r1 = (c1 / y1) - (c2 / y2); 
             equis = r1 / r; //x del punto de corte 
@@ -145,7 +231,7 @@
             ye = ((x1 * equis) / y1) + (c1 / y1);// y del punto de parte
             ye=ye.toFixed(3);//limita los decimales
           
-            alert(" punto de corte= (" + equis + "," + ye + ")");
+            // alert(" punto de corte= (" + equis + "," + ye + ")");
 
         }
     </script>
