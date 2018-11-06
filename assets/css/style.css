@@ -20,4 +20,10 @@ body .container-cal {
 body .container .form-group .but-but .btn a {
   color: white !important;
 }
+
+body .plusplus{
+  height: 50px;
+  padding-top: 12px;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

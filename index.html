@@ -42,18 +42,21 @@
     <div class="container mt-5">
         <h1>Graficadora de inecuaciones</h1>
         <label for="formGroupExampleInput">Ingrese las inecuaciones que evaluará</label>
+        <br><br><br>
         <div class="form-group">
             <label for="formGroupExampleInput">Primera inecuación</label>
             <div class="d-flex">
-                <input type="text" class="x1 form-control m-2" name="x1" id="formGroupExampleInput" placeholder="Ejemplo 2X">+
+                <input type="text" class="x1 form-control m-2" name="x1" id="formGroupExampleInput" placeholder="Ejemplo 2X">
+                <div class="plusplus">
+                   <h5>+</h5>
+                </div>
                 <input type="text" class="y1 form-control m-2" name="y1" id="formGroupExampleInput" placeholder="Ejemplo Y">
                 <select class="custom-select m-2" id="inputGroupSelect01">
                     <option selected>Elige...</option>
-                    <option value="1">>=</option>
-                    <option value="2">
-                        <=</option> <option value="3">
-                            <</option> <option value="4">>
-                    </option>
+                    <option value="1"> >= </option>
+                    <option value="2"> <= </option>
+                    <option value="3"> < </option>
+                    <option value="4"> > </option>
                 </select>
                 <input type="text" class="c1 form-control m-2" name="c1" id="formGroupExampleInput" placeholder="Ejemplo 0">
             </div>
@@ -61,18 +64,21 @@
         <div class="form-group">
             <label for="formGroupExampleInput">Segunda inecuación</label>
             <div class="d-flex">
-                <input type="text" class="x2 form-control m-2" name="x2" id="formGroupExampleInput" placeholder="Ejemplo 2X">+
+                <input type="text" class="x2 form-control m-2" name="x2" id="formGroupExampleInput" placeholder="Ejemplo 2X">
+                <div class="plusplus">
+                    <h5>+</h5>
+                </div>
                 <input type="text" class="y2 form-control m-2" name="y2" id="formGroupExampleInput" placeholder="Ejemplo Y">
                 <select class="custom-select m-2" id="inputGroupSelect01">
                     <option selected>Elige...</option>
-                    <option value="1">>=</option>
-                    <option value="2">
-                        <=</option> <option value="3">
-                            <</option> <option value="4">>
-                    </option>
+                    <option value="1"> >= </option>
+                    <option value="2"> <= </option>
+                    <option value="3"> < </option>
+                    <option value="4"> > </option>
                 </select>
                 <input type="text" class="c2 form-control m-2" name="c2" id="formGroupExampleInput" placeholder="Ejemplo 0">
             </div>
+            <br><br>
             <div class="d-flex but-but">
                 <button type="button" class="btn btn-success m-3" onclick="punto()">Paso a paso</button>
                 <button type="button" class="btn btn-danger m-3"><a href="calculator.html">Grafica</a></button>
