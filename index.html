@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>The Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="main.js"></script>
 </head>
+
 <body>
     <input class="x1" name="x1" type="text" placeholder="">
     <label for="">X + </label>
-    <input class="y1" name= "y1" type="text" placeholder="">
+    <input class="y1" name="y1" type="text" placeholder="">
     <label for="">Y</label>
     <select>
         <option value="">>=</option>
-        <option value=""><=</option>
-        <option value=""><</option>
-        <option value="">></option>
+        <option value="">
+            <=</option> <option value="">
+                <</option> <option value="">>
+        </option>
     </select>
-    <input class="c1" name ="c1" type="text" placeholder="d">
+    <input class="c1" name="c1" type="text" placeholder="d">
     <input class="x2" name="x2" type="text" placeholder="">
     <label for="">X+ </label>
-    <input class="y2" name= "y2" type="text" placeholder="">
+    <input class="y2" name="y2" type="text" placeholder="">
     <label for="">Y</label>
     <select>
         <option value="">>=</option>
-        <option value=""><=</option>
-        <option value=""><</option>
-        <option value="">></option>
+        <option value="">
+            <=</option> <option value="">
+                <</option> <option value="">>
+        </option>
     </select>
-    <input class="c2" name ="c2" type="text" placeholder="d">
+    <input class="c2" name="c2" type="text" placeholder="d">
     <button onclick=punto()>púlsame</button>
     <script type="text/javascript">
-      
-        function punto()
-        {
-            var x1=$("x1").val();
-            var y1=$("y1").val();
-            var c1=$("c1").val();
-            var x2=$("x2").val();
-            var y2=$("y2").val();
-            var c2=$("c2").val();
+        function punto() {
+            var x1 = $("x1").val();
+            var y1 = $("y1").val();
+            var c1 = $("c1").val();
+            var x2 = $("x2").val();
+            var y2 = $("y2").val();
+            var c2 = $("c2").val();
 
-            var ex1=-x1+"x/"+y1;
-            var ec1=c1+"/"+y1;
-            var ex2=-x2+"x/"+y2;
-            var ec2=c2+"/"+y2;
-            if(x1%y1==0)
-            {
-                ex1=(-x1/y1)+"x";
+            var ex1 = -x1 + "x/" + y1;
+            var ec1 = c1 + "/" + y1;
+            var ex2 = -x2 + "x/" + y2;
+            var ec2 = c2 + "/" + y2;
+            if (x1 % y1 == 0) {
+                ex1 = (-x1 / y1) + "x";
             }
-            if(x2%y2==0)
-            {
-                ex2=(-x2/y2)+"x";
+            if (x2 % y2 == 0) {
+                ex2 = (-x2 / y2) + "x";
             }
-            if(c1%y1==0)
-            {
-                ec1=c1/y1;
+            if (c1 % y1 == 0) {
+                ec1 = c1 / y1;
             }
-            if(c2%y2==0)
-            {
-                ec2=c2/y2;
+            if (c2 % y2 == 0) {
+                ec2 = c2 / y2;
             }
-            var ye1=ex1+ec1;
-            var ye2=ex2+ec2;
+            var ye1 = ex1 + ec1;
+            var ye2 = ex2 + ec2;
             var r;
-            r=-(x1/y1)+(x2/y2);
-            r1=(c1/y1)-(c2/y2);                  
-            equis= r1/r;
-            ye=((x1*equis)/y1)+(c1/y1);
-            alert("Y1 = "+ye1+" Y2= "+ye2+" punto de corte= ("+equis+","+ye+")");
+            r = -(x1 / y1) + (x2 / y2);
+            r1 = (c1 / y1) - (c2 / y2);
+            equis = r1 / r;
+            ye = ((x1 * equis) / y1) + (c1 / y1);
+            alert("Y1 = " + ye1 + " Y2= " + ye2 + " punto de corte= (" + equis + "," + ye + ")");
 
         }
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
