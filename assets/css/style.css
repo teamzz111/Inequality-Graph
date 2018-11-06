@@ -30,6 +30,14 @@ body .plusplus{
 body .pasosApasos{
   width: 100%;
   padding: 7%;
+  display: none;
+  height: auto;
+}
+
+body .Puntos{
+  width: 100%;
+  padding: 7%;
+  display: none;
 }
 
 body .pasosApasos .Inec1{
@@ -46,20 +54,14 @@ body .pasosApasos .Inec2{
   margin-left: 50%;
 }
  .VAR{
-  /* position: absolute;
-   margin-left: 10px; */
   display: flex;
   float: left;
  }
 .XY1{
-  /*position: absolute;
-  margin-left: 35px; */
   display: flex;
   float: left;
 }
 .C1{
-  /*position: absolute;
-  margin-left: 80px; */
   display: flex;
   float: left;
 }
