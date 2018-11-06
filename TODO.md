@@ -1,6 +1,6 @@
 # Métodos Numéricos - graficador de inecuaciones 
-- [ ] Diseño de la página.
-- [ ] Creación de inputs y validación de los mismos.
+- [x] Diseño de la página.
+- [x] Creación de inputs y validación de los mismos.
 - [ ] Página de resultados paso por paso.
 - [ ] Remover cuadro de añadir funciones en la librería.
 - [ ] Remover iconos que den sospechas de otras apps que usan la API (GeoGebra).
